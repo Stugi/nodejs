@@ -15,7 +15,7 @@ function anniguliruyEto(array){
 				if (max1 > max2) {
 					max2 = array[i];
 					ind2 = i;
-				} 	else {
+				} else {
 					max1 = array[i];
 					ind1 = i;
 				}
