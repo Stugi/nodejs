@@ -1,4 +1,4 @@
-let weights = [3,15,52,12,52,5];
+let weights = [3,15,52,12,52];
 console.log(anniguliruyEto(weights));
 function anniguliruyEto(array){
 	if(array.length <=1){
@@ -12,14 +12,19 @@ function anniguliruyEto(array){
 			ind2 = 1;
 		for(let i = 2; i<array.length; i++){			
 			if(array[i]>max1){
-				max1 = array[i];
-				ind1 = i;
-			} else if(array[i]>max2){
+				if (max1 > max2) {
+					max2 = array[i];
+					ind2 = i;
+				} 	else {
+					max1 = array[i];
+					ind1 = i;
+				}
+			} else if(array[i]>max2){				
 				max2 = array[i];
 				ind2 = i;
 			}
 		}
-		
+		console.log(max2,max1, array);
 		if(max2>max1){
 			[max1,max2]=[max2,max1];
 			[ind1,ind2]=[ind2,ind1];
