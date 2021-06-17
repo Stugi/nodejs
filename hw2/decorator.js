@@ -27,7 +27,7 @@ function func(){
 	return [1, 2]
 }
 let f = func;
-f = returnObject(f, 'ddd','ddddd');
+f = returnObject(f, 'ddd','ddddd','');
 console.log(f());
 
 function returnObject(func,...params){
