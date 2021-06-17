@@ -26,22 +26,24 @@ function pause(fun, sec){
 function func(){
 	return [1, 2]
 }
-let func_decoreted = returnObject(func, 'one', 'two');
-let r = func_decoreted();
-console.log(r.one); // 1
-console.log(r.two); //2
-// Пример использования №2:
-function func(){
-	return ['JS', 'is', 'programming language']
-}
-let r = returnObject (func, 'a', 'b', 'c')();
-console.log(r.c) // 'programming language'
+let f = func;
+f = returnObject(f, 'ddd','ddddd');
+console.log(f());
 
-function returnObject(func, ...names){
-  return ()=>{
+function returnObject(func,...params){
+  let result = func();
+  if(!result || !(result instanceof Array) || !params)
+    return func;
 
-  }
+    return function(){
+      let obj = {};
+      params.forEach((e,i)=>{
+        obj[e]=result[i];
+      });
+      return obj;
+    }
 }
+
 
 
 // 3 (для итоговой работы): Разработать свою авторскую страницу на
