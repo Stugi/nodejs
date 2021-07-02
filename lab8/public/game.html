@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/game.css">
+  <title>XO</title>
+</head>
+
+<body>
+  <header>
+    <h2>XO</h2>
+    <a href="index.html" class="btn">Выйти из комнаты</a>
+  </header>
+  <div class="main-page">
+    <aside class="flex-column">
+      <h3>Room</h3>
+      <p id="room"></p>
+      <h3>Игроки</h3>
+
+      <p id="us1"></p>
+      <p id="us2"></p>
+
+    </aside>
+    <main id="main">
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

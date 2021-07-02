@@ -1,0 +1,17 @@
+{
+  "name": "lab8",
+  "version": "1.0.0",
+  "description": "krestic-nolic",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "Arina",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1",
+    "query-string": "^7.0.1",
+    "socket.io": "^4.1.2"
+  }
+}
